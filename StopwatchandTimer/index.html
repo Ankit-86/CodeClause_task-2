@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-In-One Clock Features</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="app.js" defer></script>
+    <main>
+        <div id="main-container">
+            <nav>
+                <div id="navbar-container">
+                    <button id="clock-tab" class="nav-button" onclick="toggleTab('clock-content', 'clock-tab')">Clock</button>
+                    <button id="countdown-tab" class="nav-button" onclick="toggleTab('countdown-content', 'countdown-tab')">Countdown</button>
+                    <button id="stopwatch-tab" class="nav-button" onclick="toggleTab('stopwatch-content', 'stopwatch-tab')">Stopwatch</button>
+                </div>
+            </nav>
+            <div id="content-container">
+                <div id="clock-content" class="content active">
+                    <span id = "clock-time">Clock time</span>
+                    <button onclick="toggleTime()">Toggle 12hr/24hr format</button>
+                </div>
+                <div id="countdown-content" class = "content">
+                    <span id = "countdown-time">Start Countdown (1hr)!</span>
+                    <button onclick="toggleCountdown()">Start/Stop</button>
+                    <button onclick="resetCountdown()">Reset</button>
+                </div>
+                <div id="stopwatch-content" class = "content">
+                    <span id = "stopwatch-time">Start Stopwatch!</span>
+                    <button onclick="toggleStopwatch()">Start/Stop</button>
+                    <button onclick="resetStopwatch()">Reset</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
